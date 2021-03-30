@@ -1,0 +1,38 @@
+human
+last_name:text
+first_name:text
+second_name:text
+sex:text
+birth_date:date
+address:references
+
+document
+number:integer
+date_of_issue:date
+type:text
+serial:text
+issued_by:text
+human:references
+country:references
+
+address
+city:text
+index:integer
+street:text
+house:text
+room:text
+
+country
+code:integer
+name:text
+
+
+rails generate scaffold Address city:text index:integer street:text house:text room:text
+
+rails generate scaffold Country code:integer name:text
+
+rails generate scaffold Human last_name:text first_name:text second_name:text sex:text birth_date:date address:references
+
+rails generate scaffold Document number:integer date_of_issue:date type:text serial:text issued_by:text human:references country:references
+
+select 
